@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3DMESSAGE</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<div id="blocker">
+    <div id="instructions">
+        <span style="font-size:100px">Chat with My Bot</span>
+        <br/>
+        <span style="font-size:25px">Talk to this cute robot and see what'll happen next!</span>
+        <br/>
+        <span style="font-size:10px">(W,A,S,D = Move, MOUSE = Look, ENTER = Start Conversation)</span>
+    </div>
+</div>
+
+<div id="ui" style="border: #006400 3px solid; background: rgba(0,0,0,0.1); display: none">
+    <div style="width: 50%; display: block; padding: 25px 0 0 50px;">
+        Robot :
+        <span id="answer" style="color: black; font-size: 25px; width: 100%"></span>
+    </div>
+    <div style="width: 50%; display: block; padding-left: 50px;">
+        You :
+        <span id="question" style="color: black; font-size: 25px; width: 100%"></span>
+    </div>
+    <div style="width: 50%; display: inline-block; padding: 25px 0 0 50px;">
+        <button id="button-0" style="border: none">neutral</button>
+        <button id="button-1" style="border: none">anger</button>
+        <button id="button-2" style="border: none">joy</button>
+        <button id="button-3" style="border: none">fear</button>
+        <button id="button-4" style="border: none">sadness</button>
+    </div>
+    <div style="width: 50%; display: inline-block; padding: 0 0 25px 50px;">
+        <input id="question-input"autofocus style="color: black; font-size: 25px" onchange="onchangeQuestionInput(this)">
+    </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
+<script src='https://threejs.org/examples/js/renderers/Projector.js'></script>
+<script src="lib/axios.min.js"></script>
+<script src="script.js">
+</script>
+</body>
+</html>
