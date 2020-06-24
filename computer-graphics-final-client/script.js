@@ -308,7 +308,7 @@ function onchangeQuestionInput() {
 
 function fetchBotResponse(question) {
     document.getElementById('answer').innerText = "I'm thinking...";
-    axios.post('http://localhost:8080/cakechat_api/v1/actions/get_response', {
+    axios.post('http://172.17.0.2:8080/cakechat_api/v1/actions/get_response', {
         "context" : [ question ],
         "emotion" : "joy"
     })
@@ -424,7 +424,7 @@ function init() {
 
     for (let i = 0; i < 1; i++) {
 
-        loader.load('RobotExpressive.glb', function (gltf) {
+        loader.load('./model/RobotExpressive.glb', function (gltf) {
             model = gltf.scene;
 
             model.position.set(pos[i].x, pos[i].y, pos[i].z)
